@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import GlobalStyle from './style.js';
+import GlobalIconFont from './statics/iconfont/iconfont.js'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// import * as rrweb from 'rrweb';
+// import 'rrweb.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// let events = [];
+// rrweb.record({
+//     emit(event) {
+//         // 用任意方式存储 event
+//         events.push(event);
+//     }
+// });
+
+
+
+// setTimeout(() => {
+//     console.log("------");
+//     const replayer = new rrweb.Replayer(events);
+//     replayer.play();
+// },10000)
+
+
+
+
+let Creator = (
+    <Fragment>
+        <GlobalStyle />
+        <GlobalIconFont />
+        <App />
+    </Fragment>
+)
+ReactDOM.render(Creator, document.getElementById('root'));
